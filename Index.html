@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Manipulation with Forms</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="title">DOM Manipulation with Forms</h1>
+    <p id="description">
+      DOM Manipulation task updating data from user form to the table with
+      validation
+    </p>
+    <main class="container">
+      <article class="form-container">
+        <form class="user-form" id="form">
+          <div class="form-group">
+            <label for="first-name" class="lbl"
+              >First Name <span class="mand">*</span></label
+            >
+            <input
+              type="text"
+              name="First_Name"
+              id="first-name"
+              class="inp"
+              placeholder="John"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="last-name" class="lbl"
+              >Last Name<span class="mand">*</span></label
+            >
+            <input
+              type="text"
+              name="Last_Name"
+              id="last-name"
+              class="inp"
+              placeholder="Doe"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="address" class="lbl"
+              >Address <span class="mand">*</span></label
+            >
+            <textarea
+              type=""
+              name="address"
+              id="address"
+              class="inp"
+              placeholder="Please enter your address"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="pincode" class="lbl"
+              >Pincode <span class="mand">*</span></label
+            >
+            <input
+              type="text"
+              name="user_Pincode"
+              id="pincode"
+              class="inp"
+              placeholder="000000"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <p class="lbl">Gender</p>
+            <div class="option-container">
+              <input type="radio" name="gender" id="male" value="Male" />
+              <label for="male" class="opt">Male</label>
+              <input type="radio" name="gender" id="female" value="Female" />
+              <label for="female" class="opt">Female</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="foods" class="lbl"
+              >Choose any two food items <span class="mand">*</span></label
+            >
+            <select
+              name="food-choice"
+              id="foods"
+              class="select-inp"
+              multiple
+              required
+            >
+              <option value="Pizza">Pizza</option>
+              <option value="Burger">Burger</option>
+              <option value="Fried Chicken">Fried Chicken</option>
+              <option value="Biryani">Biryani</option>
+              <option value="Salad">Salad</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="state" class="lbl"
+              >State <span class="mand">*</span></label
+            >
+            <input
+              type="text"
+              name="user-state"
+              id="state"
+              class="inp"
+              placeholder="TamilNadu"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="country" class="lbl"
+              >Country <span class="mand">*</span></label
+            >
+            <input
+              type="text"
+              name="user-country"
+              id="country"
+              class="inp"
+              placeholder="India"
+              required
+            />
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-primary" id="submit" type="submit">
+              Submit
+            </button>
+            <button class="btn btn-reset" type="reset">Reset</button>
+          </div>
+        </form>
+      </article>
+      <article class="table-container">
+        <table class="table">
+          <thead class="head">
+            <th class="head-items">First Name</th>
+            <th class="head-items">Last Name</th>
+            <th class="head-items">Address</th>
+            <th class="head-items">Pincode</th>
+            <th class="head-items">Gender</th>
+            <th class="head-items">Choice of food</th>
+            <th class="head-items">State</th>
+            <th class="head-items">Country</th>
+          </thead>
+          <tbody class="body"></tbody>
+        </table>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+  </body>
+</html>
